@@ -1,0 +1,900 @@
+.ticket-window {
+  height: 845px;
+  background: #FFFFFF;
+  padding: 87px 0 85px;
+}
+
+
+.ticket-window-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 970px;
+}
+
+
+.left-buy-ticket {
+  width: 41.3%;
+  padding-top: 4px;
+}
+
+.left-buy-ticket h2 {
+  font-size: 50px;
+  line-height: 52px;
+  letter-spacing: 0;
+}
+
+.left-buy-ticket p {
+  margin: 13px 0 72px 0px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #710707;
+}
+
+
+.left-buy-ticket .underline-title::after {
+  background: #740C11;
+  opacity: 0.9;
+  bottom: -12px;
+  height: 3px;
+}
+
+.form-amount-window .underline-title::after {
+
+  bottom: -6px;
+  height: 2px;
+}
+
+.ticket-window-form input,
+.ticket-window-form select {
+  display: block;
+  background: #FFFFFF;
+  border: 1px solid #030303;
+  box-sizing: border-box;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  width: 100%;
+  padding-left: 43px;
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+.ticket-window-form select {
+  padding-bottom: 7px;
+  padding-top: 15px;
+  padding-left: 42px;
+}
+
+.date-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-time input {
+  width: 190px;
+  height: 45px;
+}
+
+.ticket-window-form input::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+}
+
+input[type="date"]::before,
+input[type="time"]::before {
+  color: #030303;
+  content: attr(placeholder);
+}
+
+input[type="date"],
+input[type="time"] {
+  color: #ffffff;
+}
+
+input[type="date"]:focus,
+input[type="date"]:valid,
+input[type="time"]:focus,
+input[type="time"]:valid {
+  color: #030303;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before,
+input[type="time"]:focus::before,
+input[type="time"]:valid::before {
+  content: "" !important;
+}
+
+#tick-date {
+  background: url(../assets/icons/date.svg);
+  background-repeat: no-repeat;
+  background-position: 14px 14px;
+  position: relative;
+}
+
+#tick-date:after,
+#tick-time:after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background: url(../assets/icons/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* padding: 0 7px; */
+  margin-right: 14px;
+}
+
+#tick-date:focus:after,
+#tick-time:focus:after,
+#tick-type:focus:after {
+  transform: rotate(-180deg);
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+#tick-date::-webkit-calendar-picker-indicator,
+#tick-time::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+/* adjust increase/decrease button */
+#tick-date::-webkit-inner-spin-button,
+#tick-time::-webkit-inner-spin-button {
+  z-index: 1;
+}
+
+/* adjust clear button */
+#tick-date::-webkit-clear-button,
+#tick-time::-webkit-clear-button {
+  z-index: 1;
+}
+
+
+#tick-time {
+  background: url(../assets/icons/time.svg);
+  background-repeat: no-repeat;
+  background-position: 14px 14px;
+  position: relative;
+}
+
+#tick-name {
+  background: url(../assets/icons/name.svg);
+  background-repeat: no-repeat;
+  background-position: 14px 14px;
+}
+
+#tick-email {
+  background: url(../assets/icons/email.svg);
+  background-repeat: no-repeat;
+  background-position: 14px 16px;
+}
+
+#tick-tel {
+  background: url(../assets/icons/tel.svg);
+  background-repeat: no-repeat;
+  background-position: 14px 10px;
+}
+
+.select {
+  position: relative;
+}
+
+.select:after {
+  content: '';
+  background: url(../assets/icons/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 8px;
+  font-size: 12px;
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  z-index: 1;
+  text-align: center;
+  width: 4.5%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+#tick-type {
+  padding-right: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#tick-type {
+  background: url(../assets/icons/type.svg);
+  background-repeat: no-repeat;
+  background-position: 14px 14px;
+  position: relative;
+}
+
+option {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #030303;
+  padding: 14px;
+}
+
+
+
+.entry-ticket {
+  border: 1px solid #030303;
+  padding: 10px 15px 2px;
+
+}
+
+
+.number-window {
+  all: unset;
+  padding-left: 10px;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+
+}
+
+.amount-btn-window {
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  width: 106px;
+  height: 25.5px;
+  margin-top: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 35px);
+
+}
+
+.amount-btn-window input {
+  margin: 0;
+  padding: 0;
+}
+
+.form-amount-window label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: #030303;
+}
+
+.amount-label-window {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  margin-top: 11px;
+  margin-bottom: 14px;
+}
+
+.amount-btn-window button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  border: 1px solid #030303;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  text-align: center;
+  border: none;
+  background: #030303;
+}
+
+.window-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.form-amount-window h4 {
+  font-family: Forum;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #9D8665;
+  margin-bottom: 15px;
+}
+
+.right-buy-ticket {
+  margin-top: 4px;
+  width: 54.6%;
+  padding: 25px 30px 0;
+  border: 1px solid #030303;
+}
+
+.right-buy-ticket h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 35px;
+  color: #272727;
+}
+
+.right-buy-ticket h5 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  color: #740C11;
+  opacity: 0.9;
+}
+
+.ticket-window-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tick-font {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 18px;
+  color: #030303;
+  margin-top: 9px;
+  padding-left: 30px;
+}
+
+.tick-date-over {
+  background: url(../assets/icons/date.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+
+.tick-time-over {
+  background: url(../assets/icons/time.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+
+.tick-date-check {
+  background: url(../assets/icons/check.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+
+.overview {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.icon-img {
+  background: url(../assets/louvre.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 0px;
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  width: 150px;
+  height: 120px;
+
+}
+
+.ticket-all {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 31px;
+  display: flex;
+  justify-content: space-between;
+  color: #030303;
+  margin-bottom: 1px;
+}
+
+.ticket-all:nth-child(2) {
+  margin-bottom: 7px;
+}
+
+.count-over-amount, .count-over-amount2 {
+  display: inline-block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  background: #030303;
+  color: #A4A4A3;
+  padding: 0px 11px;
+  border-radius: 5px;
+  margin: 0px 5px 0px -1px;
+}
+
+.total-price {
+  border-top: 2px solid #740C11;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 35px;
+  color: #030303;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.front-card,
+.back-card {
+  position: relative;
+  background: #BCBCBC;
+  width: 360px;
+  height: 211px;
+  padding: 16px 19px 0px;
+  margin-top: 11px;
+  border-radius: 2px;
+  user-select: none;
+  z-index: 2;
+}
+
+.front-card label {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+  margin-bottom: 3px;
+
+}
+
+.front-card input {
+  background: #FFFFFF;
+  border: 0.5px solid #A4A4A3;
+}
+
+.card-date {
+  display: flex;
+}
+
+.card-month {
+  position: relative;
+}
+
+.card-date-prev {
+  position: absolute;
+  right: 14px;
+  bottom: 13px;
+  z-index: 1;
+  height: 17px;
+  width: 28px;
+  background-color: #fff;
+  background: url(../assets/icons/arrow-card-prev.svg);
+  background-repeat: no-repeat;
+  background-size: 7px;
+  background-position: 47% 21%;
+  border: none;
+  border-left: 1px solid #a4a4a3;
+  transition: background 0.3s ease-in-out;
+}
+
+.card-date-next {
+  position: absolute;
+  right: 14px;
+  top: 2px;
+  z-index: 1;
+  height: 17px;
+  width: 28px;
+  background-color: #fff;
+  background: url(../assets/icons/arrow-card.svg);
+  background-repeat: no-repeat;
+  background-size: 8px;
+  background-position: 50% 76%;
+  border: none;
+  border-left: 1px solid #a4a4a3;
+  transition: background 0.3s ease-in-out;
+}
+
+.card-date-prev:hover,
+.card-date-next:hover {
+  background-color: #bcbcbc;
+  transition: background 0.3s ease-in-out;
+}
+
+.card-date-prev:focus,
+.card-date-next:focus {
+  background-color: #f1ebeb;
+  transition: background 0.3s ease-in-out;
+}
+
+#card-number {
+  width: 215px;
+  height: 35px;
+  padding: 10px;
+  margin: 0px 0 12px 0;
+}
+
+#card-date-month,
+#card-date-year {
+  display: inline-block;
+  width: 100px;
+  height: 35px;
+  padding: 10px;
+  margin: 1px 13px 12px 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #161615;
+}
+
+
+#card-name {
+  padding: 6px;
+  margin: 0;
+}
+
+.front-card::before {
+  content: '';
+  width: 55px;
+  height: 16px;
+  background-size: cover;
+  background-image: url(../assets/img/Visa.png);
+  position: absolute;
+  top: 34px;
+  right: 21px;
+}
+
+.front-card::after {
+  content: '';
+  width: 53px;
+  height: 32px;
+  background-size: cover;
+  background-image: url(../assets/img/Mastercard.png);
+  position: absolute;
+  top: 64px;
+  right: 22px;
+}
+
+.card-form {
+  position: relative;
+}
+
+.back-card {
+  background: #939393;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
+  top: 19px;
+  right: -1px;
+  z-index: 1;
+}
+
+.black-line {
+  width: 100%;
+  padding: 0;
+  height: 45px;
+  background: #161615;
+  margin: 25px 0 17px 0;
+}
+
+.back-card p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  width: 55px;
+  color: #161615;
+  margin-left: 10px;
+
+  color: #161615;
+}
+
+#cvv-code {
+  width: 75px;
+  height: 36px;
+  padding: 10px;
+  margin: 4px 0 6px 0;
+  background: #FFFFFF;
+  border: 0.5px solid #A4A4A3;
+}
+
+.back-card label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  padding-left: 10px;
+  color: #161615;
+}
+
+.cvv-block {
+  margin-right: 20px;
+}
+
+#book-ticket {
+  position: relative;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 25px;
+  padding: 10px 86px;
+  background: #710707;
+  opacity: 0.9;
+  margin-top: 56px;
+  margin-bottom: 0;
+  border: none;
+  width: initial;
+  float: right;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+#book-ticket .circle {
+  position: absolute;
+  background-color: #9D8665;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.7s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+
+
+.burger-button {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 30;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+
+.burger-button-lines {
+  background-color: #FFFFFF;
+  height: 0px;
+}
+
+.burger-button-lines::before,
+.burger-button-lines::after {
+  position: absolute;
+  width: 35px;
+  height: 1px;
+  background-color: #030303;
+}
+
+
+.burger-button-lines::before {
+  content: '';
+  top: 42px;
+  right: 25px;
+  transform: rotate(45deg);
+}
+
+.burger-button-lines::after {
+  content: '';
+  top: 42px;
+  right: 25px;
+  transform: rotate(-45deg);
+}
+
+.ticket-window {
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  left: -100%;
+  right: 100%;
+  transition: right 1s ease;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=55);
+  opacity: 0.55;
+}
+
+* html .overlay {
+  position: absolute;
+  height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + "px");
+}
+
+@media (max-width: 1024px) {
+  .ticket-window.container {
+    max-width: 100%;
+  }
+
+  .ticket-window {
+    height: 768px;
+    top: 46px;
+    padding: 71px 0 30px;
+  }
+
+  .left-buy-ticket {
+    width: 41.2%;
+  }
+
+  .left-buy-ticket h2.section-title {
+    line-height: 55px;
+  }
+
+  #tick-date:after,
+  #tick-time:after,
+  #tick-type:after {
+    margin-right: 14px;
+  }
+
+  .left-buy-ticket p {
+    margin: 11px 0 71px 0px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .ticket-window.container {
+    max-width: 590px;
+  }
+
+  .ticket-window {
+    height: 1479px;
+  }
+
+  .ticket-window-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 530px;
+  }
+
+  #tick-date:after,
+  #tick-time:after,
+  #tick-type:after {
+
+    margin-right: 12.7px;
+  }
+
+  .left-buy-ticket,
+  .right-buy-ticket {
+    width: 100%;
+  }
+
+  .left-buy-ticket {
+    padding-top: 9px;
+    margin-bottom: 46px;
+  }
+
+  .left-buy-ticket h2.section-title {
+    line-height: 50px;
+  }
+
+  .left-buy-ticket p {
+    margin: 16px 0 52px 0px;
+  }
+
+  .date-time input {
+    width: 47.2%;
+  }
+
+  .right-buy-ticket {
+    padding: 25px 14px 22px;
+  }
+
+  .front-card,
+  .back-card {
+    margin-top: 16px;
+  }
+
+  .card-date-prev {
+    background-position: 49% 21%;
+  }
+
+  .back-card {
+    top: 13px;
+  }
+}
+
+@media (max-width: 420px) {
+  .ticket-window.container {
+    max-width: 100%;
+    height: 1754px;
+  }
+
+  .ticket-window-container {
+    max-width: 360px;
+  }
+
+  .left-buy-ticket h2.section-title {
+    line-height: 30px;
+    font-size: 32px;
+  }
+
+  .date-time {
+    display: block;
+  }
+
+  .date-time input {
+    width: 100%;
+  }
+
+  .front-card,
+  .back-card {
+    width: 330px;
+  }
+
+  .front-card {
+    margin-top: 17px;
+  }
+
+  .back-card {
+    margin-top: 24px;
+    position: initial;
+
+  }
+
+  #book-ticket {
+    margin-top: 38px;
+  }
+
+  .right-buy-ticket {
+    padding: 25px 14px 24px;
+  }
+
+  .front-card label {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
